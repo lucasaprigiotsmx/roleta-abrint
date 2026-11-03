@@ -351,7 +351,7 @@ export default function Home() {
       {/* 1. TOP SECTION: Brand Logo + Vertical Totem Headline */}
       <header className="relative z-10 w-full pt-5 sm:pt-7 px-4 flex flex-col items-center text-center gap-2">
         <img
-          src="/logo-tsmx.webp"
+          src={`${import.meta.env.BASE_URL}logo-tsmx.webp`}
           alt="TSMX Logo"
           className="h-12 sm:h-16 md:h-20 object-contain"
         />

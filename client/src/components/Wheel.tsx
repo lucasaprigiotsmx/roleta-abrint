@@ -361,7 +361,7 @@ export function Wheel({
           className="group absolute w-[20%] h-[20%] rounded-full flex flex-col items-center justify-center bg-[#121212] border-[3px] border-[#2A2A2A] hover:border-[#F26521] shadow-[0_6px_20px_rgba(0,0,0,0.85)] transition-all duration-200 hover:scale-105 active:scale-95 disabled:cursor-not-allowed overflow-hidden"
         >
           <img
-            src="/logo-tsmx.webp"
+            src={`${import.meta.env.BASE_URL}logo-tsmx.webp`}
             alt="TSMX"
             className="w-[70%] h-auto object-contain"
           />

@@ -219,7 +219,7 @@ export function WheelCustomizer({
                 onStaticChange?.(true);
               }}
               className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-200 transition-colors"
-              title="Restaurar os 5 prêmios padrão da ABRINT"
+              title="Restaurar os prêmios padrão da ABRINT (2x cada)"
             >
               <RotateCcw size={13} />
               Padrão ABRINT

@@ -34,39 +34,103 @@ const OLD_NEON_OR_PASTEL_COLORS = new Set([
 export const DEFAULT_SEGMENTS: WheelSegment[] = [
   {
     id: '1',
-    label: 'Garrafa',
+    label: 'Caderno com Caneta',
     color: '#181818', // Preto
-    percentage: 60, // 30 un. de 50 (60%)
+    percentage: 8.33,
     showCongrats: true,
     customMessage: '',
   },
   {
     id: '2',
-    label: 'Xícara Personalizada',
+    label: 'Power Bank',
     color: '#F26521', // Laranja
-    percentage: 12, // 6 un. de 50 (12%)
+    percentage: 8.33,
     showCongrats: true,
     customMessage: '',
   },
   {
     id: '3',
-    label: 'Power Bank',
+    label: 'Xícara TSMX',
     color: '#181818', // Preto
-    percentage: 12, // 6 un. de 50 (12%)
+    percentage: 8.33,
     showCongrats: true,
     customMessage: '',
   },
   {
     id: '4',
-    label: 'Caderno com Caneta',
+    label: 'Garrafa',
     color: '#F26521', // Laranja
-    percentage: 16, // 8 un. de 50 (16%)
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '5',
+    label: 'Caderno',
+    color: '#181818', // Preto
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '6',
+    label: 'Caneta',
+    color: '#F26521', // Laranja
+    percentage: 8.35,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '7',
+    label: 'Caderno com Caneta',
+    color: '#181818', // Preto
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '8',
+    label: 'Power Bank',
+    color: '#F26521', // Laranja
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '9',
+    label: 'Xícara TSMX',
+    color: '#181818', // Preto
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '10',
+    label: 'Garrafa',
+    color: '#F26521', // Laranja
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '11',
+    label: 'Caderno',
+    color: '#181818', // Preto
+    percentage: 8.33,
+    showCongrats: true,
+    customMessage: '',
+  },
+  {
+    id: '12',
+    label: 'Caneta',
+    color: '#F26521', // Laranja
+    percentage: 8.35,
     showCongrats: true,
     customMessage: '',
   },
 ];
 
-const PRESET_VERSION = 'abrint_2026_default_v2';
+const PRESET_VERSION = 'abrint_2026_default_v5';
 
 export default function Home() {
   const [segments, setSegments] = useState<WheelSegment[]>(() => {
@@ -75,6 +139,7 @@ export default function Home() {
       if (savedVersion !== PRESET_VERSION) {
         localStorage.setItem('wheelSegments', JSON.stringify(DEFAULT_SEGMENTS));
         localStorage.setItem('wheelStatic', JSON.stringify(true));
+        localStorage.setItem('wheelTotemTitle', 'GIRE E GANHE!');
         localStorage.setItem('wheelPresetVersion', PRESET_VERSION);
         return DEFAULT_SEGMENTS;
       }
@@ -108,8 +173,10 @@ export default function Home() {
     if (savedVersion !== PRESET_VERSION) {
       setSegments(DEFAULT_SEGMENTS);
       setIsStatic(true);
+      setTotemTitle('GIRE E GANHE!');
       localStorage.setItem('wheelSegments', JSON.stringify(DEFAULT_SEGMENTS));
       localStorage.setItem('wheelStatic', JSON.stringify(true));
+      localStorage.setItem('wheelTotemTitle', 'GIRE E GANHE!');
       localStorage.setItem('wheelPresetVersion', PRESET_VERSION);
     }
   }, []);
